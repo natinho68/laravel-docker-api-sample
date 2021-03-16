@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
@@ -14,7 +13,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'web',
+        'guard' => 'api',
         'passwords' => 'users',
     ],
 
@@ -42,9 +41,9 @@ return [
         ],
 
         'api' => [
-            'driver' => 'token',
+            'driver' => 'jwt',
             'provider' => 'users',
-            'hash' => false,
+            'hash' => true,
         ],
     ],
 
@@ -113,5 +112,4 @@ return [
     */
 
     'password_timeout' => 10800,
-
 ];
