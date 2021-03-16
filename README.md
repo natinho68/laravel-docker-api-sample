@@ -9,4 +9,8 @@ php artisan migrate
 
 php artisan db:seed
 
-need an api_token from users to query the api
+create an user with POST /user (required: name, email, password)
+
+target /auth/login with credentials will return a bearer token
+
+target api routes with Authorization header
